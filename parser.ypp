@@ -132,17 +132,15 @@ whileStatement:
     
 //https://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.14
 postIncrementExpression:
-    variable PLUS_PLUS
+    name PLUS_PLUS
 
 statementExpression:
     assignment
     | postIncrementExpression 
     | methodCall
-
 StatementExpressionList:
     statementExpression
     | StatementExpressionList COMMA statementExpression
-
 forInit:
     variableDeclaration
     {
